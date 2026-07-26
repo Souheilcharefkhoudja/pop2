@@ -4,254 +4,399 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Le Braquage — N°01 · Une édition PoP'Way</title>
-<meta name="description" content="Un manifeste sur le fast food moderne, écrit par le fondateur de PoP'Way. Numéro 01, printemps 2026." />
+<meta name="description" content="Un traité sur le fast food moderne, écrit par le fondateur de PoP'Way. Numéro 01, printemps 2026." />
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <script>
   tailwind.config = {
     theme: {
       extend: {
         colors: {
-          cream: '#F3EEE4',
-          'cream-2': '#EAE3D3',
-          ink: '#151311',
-          'ink-2': '#2A2621',
-          muted: '#7A7368',
-          rule: '#1A1815',
-          paprika: '#B84A1C',
-          'paprika-2': '#8E3612',
+          cream:   '#EFE8D6',
+          'cream-2': '#E6DDC5',
+          'cream-3': '#D9CFB4',
+          ink:     '#12100E',
+          'ink-2': '#1F1B16',
+          muted:   '#7A7060',
+          oxblood: '#6E2413',
+          'oxblood-2': '#4E1808',
+          gold:    '#A08850',
+          'gold-2': '#8A7440',
         },
         fontFamily: {
           serif: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
-          sans: ['Inter', 'system-ui', 'sans-serif'],
+          sans:  ['Inter', 'system-ui', 'sans-serif'],
         },
       }
     }
   }
 </script>
 <style>
-  html, body { background: #F3EEE4; }
+  html, body { background: #EFE8D6; }
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    color: #151311;
+    color: #12100E;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "ss01", "cv11", "kern";
   }
-  ::selection { background: #151311; color: #F3EEE4; }
+  ::selection { background: #12100E; color: #EFE8D6; }
 
-  .serif { font-family: 'Fraunces', ui-serif, Georgia, serif; font-variation-settings: "opsz" 96, "SOFT" 30; }
-  .serif-text { font-family: 'Fraunces', ui-serif, Georgia, serif; font-variation-settings: "opsz" 14, "SOFT" 20; }
-  .serif-italic { font-family: 'Fraunces', ui-serif, Georgia, serif; font-style: italic; font-variation-settings: "opsz" 96, "SOFT" 60; }
+  h1,h2,h3,h4 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+
+  .display     { font-family: 'Fraunces', ui-serif, Georgia, serif; font-variation-settings: "opsz" 144, "SOFT" 30, "wght" 400; letter-spacing: -0.025em; }
+  .display-i   { font-family: 'Fraunces', ui-serif, Georgia, serif; font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 80, "wght" 300; letter-spacing: -0.02em; }
+  .display-med { font-family: 'Fraunces', ui-serif, Georgia, serif; font-variation-settings: "opsz" 96, "SOFT" 30, "wght" 400; letter-spacing: -0.02em; }
+  .display-med-i { font-family: 'Fraunces', ui-serif, Georgia, serif; font-style: italic; font-variation-settings: "opsz" 96, "SOFT" 80, "wght" 300; letter-spacing: -0.015em; }
+  .serif       { font-family: 'Fraunces', ui-serif, Georgia, serif; font-variation-settings: "opsz" 48, "SOFT" 30, "wght" 400; }
+  .serif-i     { font-family: 'Fraunces', ui-serif, Georgia, serif; font-style: italic; font-variation-settings: "opsz" 48, "SOFT" 80, "wght" 300; }
+  .body-serif  { font-family: 'Fraunces', ui-serif, Georgia, serif; font-variation-settings: "opsz" 14, "SOFT" 20, "wght" 400; }
+  .body-serif-i{ font-family: 'Fraunces', ui-serif, Georgia, serif; font-style: italic; font-variation-settings: "opsz" 14, "SOFT" 40, "wght" 400; }
 
   .label {
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 10px;
-    letter-spacing: 0.28em;
+    letter-spacing: 0.32em;
     text-transform: uppercase;
     font-weight: 500;
+    line-height: 1;
   }
+  .label-lg {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.36em;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+  }
+  .num  { font-variant-numeric: oldstyle-nums proportional-nums; }
+  .num-lining { font-variant-numeric: lining-nums tabular-nums; }
+  .roman { font-family: 'Fraunces', ui-serif, Georgia, serif; font-variation-settings: "opsz" 96, "wght" 400; letter-spacing: 0.02em; }
 
-  .rule { border-color: #151311; }
-  .hair { height: 1px; background: #151311; opacity: .15; }
-  .hair-dark { height: 1px; background: #F3EEE4; opacity: .18; }
+  .rule       { border-color: rgba(18,16,14,.18); }
+  .rule-dark  { border-color: rgba(239,232,214,.20); }
+  .hair       { height: 1px; background: rgba(18,16,14,.22); }
+  .hair-gold  { height: 1px; background: #A08850; opacity: .7; }
+  .hair-dark  { height: 1px; background: rgba(239,232,214,.25); }
+
+  .ornament::before, .ornament::after {
+    content: ""; display: inline-block; vertical-align: middle;
+    width: 40px; height: 1px; background: currentColor; opacity: .35; margin: 0 14px;
+  }
+  .ornament-diamond::before, .ornament-diamond::after {
+    content: ""; display: inline-block; vertical-align: middle;
+    width: 60px; height: 1px; background: currentColor; opacity: .35; margin: 0 14px;
+  }
+  .ornament-diamond > span::before { content: "◆"; color: #A08850; margin-right: 12px; font-size: .7em; vertical-align: 2px; }
+  .ornament-diamond > span::after  { content: "◆"; color: #A08850; margin-left:  12px; font-size: .7em; vertical-align: 2px; }
 
   .dropcap::first-letter {
     font-family: 'Fraunces', ui-serif, Georgia, serif;
     font-weight: 500;
-    font-size: 5.2em;
+    font-size: 5.6em;
     float: left;
-    line-height: 0.85;
-    padding: 0.08em 0.12em 0 0;
-    color: #B84A1C;
-    font-variation-settings: "opsz" 144, "SOFT" 20;
+    line-height: 0.82;
+    padding: 0.09em 0.12em 0 0;
+    color: #6E2413;
+    font-variation-settings: "opsz" 144, "SOFT" 20, "wght" 500;
   }
 
-  .toc-row { display: grid; grid-template-columns: auto 1fr auto; align-items: baseline; gap: 1rem; }
-  .leader { border-bottom: 1px dotted #15131155; transform: translateY(-4px); }
+  .toc-row { display: grid; grid-template-columns: 5rem 1fr auto; align-items: baseline; gap: 1.25rem; }
+  @media (max-width: 640px){ .toc-row { grid-template-columns: 3.5rem 1fr auto; gap: 1rem; } }
 
-  @keyframes rise { from { opacity:0; transform: translateY(16px); } to { opacity:1; transform: none; } }
-  .rise { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
-  .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}.d5{animation-delay:.45s}
+  @keyframes rise { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: none; } }
+  .rise { animation: rise 1.1s cubic-bezier(.2,.7,.2,1) both; }
+  .d1{animation-delay:.05s}.d2{animation-delay:.18s}.d3{animation-delay:.32s}.d4{animation-delay:.46s}.d5{animation-delay:.60s}.d6{animation-delay:.74s}
 
   @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .ticker { animation: ticker 45s linear infinite; }
+  .ticker { animation: ticker 60s linear infinite; }
 
   details > summary { list-style: none; cursor: pointer; }
   details > summary::-webkit-details-marker { display: none; }
   details[open] .faq-plus { transform: rotate(45deg); }
-  .faq-plus { transition: transform .3s ease; }
+  .faq-plus { transition: transform .35s cubic-bezier(.2,.7,.2,1); }
 
   .grain::before {
     content:""; position:absolute; inset:0; pointer-events:none;
     background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
-    opacity: .05; mix-blend-mode: multiply;
+    opacity: .06; mix-blend-mode: multiply;
+  }
+  .grain-light::before {
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/></svg>");
+    opacity: .04; mix-blend-mode: overlay;
+  }
+
+  .paper {
+    background:
+      radial-gradient(1200px 800px at 20% 10%, rgba(160,136,80,.10), transparent 60%),
+      radial-gradient(1000px 700px at 90% 90%, rgba(110,36,19,.06), transparent 60%),
+      #EFE8D6;
+  }
+
+  .book {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,.04) 0%, rgba(0,0,0,0) 40%),
+      radial-gradient(600px 400px at 30% 10%, rgba(160,136,80,.18), transparent 60%),
+      linear-gradient(180deg, #1F1B16 0%, #12100E 100%);
+    box-shadow:
+      inset 8px 0 12px -8px rgba(0,0,0,.6),
+      inset -1px 0 0 rgba(255,255,255,.03),
+      0 60px 80px -30px rgba(0,0,0,.55),
+      0 30px 40px -20px rgba(0,0,0,.35);
+  }
+  .book-spine {
+    background: linear-gradient(90deg, rgba(0,0,0,.5), rgba(0,0,0,0) 60%);
+  }
+  .foil {
+    background: linear-gradient(180deg, #B89A5E 0%, #A08850 40%, #7A6538 70%, #A08850 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  }
+
+  .col-rules > * + * { border-top: 1px solid rgba(18,16,14,.18); }
+
+  .link-under {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    background-position: 0 100%;
+    padding-bottom: 2px;
+    transition: background-size .4s ease;
+  }
+  .link-under:hover { background-size: 0% 1px; background-position: 100% 100%; }
+
+  @media (min-width: 900px){
+    .two-col { column-count: 2; column-gap: 3rem; column-rule: 1px solid rgba(18,16,14,.15); }
+    .two-col p { break-inside: avoid; }
   }
 </style>
 </head>
 <body class="min-h-screen bg-cream">
 
 <!-- MASTHEAD / NAV -->
-<header class="border-b rule border-black/15 sticky top-0 z-50 bg-cream/95 backdrop-blur">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-10">
-    <div class="flex items-center justify-between py-3">
-      <div class="flex items-center gap-4">
-        <span class="label text-ink/70 hidden md:inline">Numéro 01 · Printemps 2026</span>
+<header class="border-b rule sticky top-0 z-50 bg-cream/95 backdrop-blur">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12">
+    <!-- top strip -->
+    <div class="grid grid-cols-3 items-center py-3.5">
+      <div class="hidden md:flex items-center gap-4">
+        <span class="label text-ink/60">Vol. 01 · Printemps 2026</span>
       </div>
-      <div class="serif text-2xl md:text-[28px] leading-none tracking-tight text-ink">
-        PoP<span class="text-paprika">·</span>Way
+      <div class="text-center">
+        <div class="display text-[26px] md:text-[32px] leading-none text-ink">
+          PoP<span class="text-oxblood">·</span>Way
+        </div>
       </div>
-      <div class="flex items-center gap-6">
-        <span class="label text-ink/70 hidden md:inline">Édition FR · 297€</span>
-        <a href="#commander" class="hidden md:inline-flex items-center gap-2 bg-ink text-cream px-4 py-2 rounded-full text-[12px] font-medium hover:bg-paprika transition">
-          Commander →
+      <div class="flex items-center justify-end gap-6">
+        <span class="label text-ink/60 hidden md:inline num">Édition FR — 297€</span>
+        <a href="#commander" class="hidden md:inline-flex items-center gap-2 border border-ink px-4 py-2 rounded-none text-[11px] tracking-[0.24em] uppercase font-medium hover:bg-ink hover:text-cream transition">
+          Commander
         </a>
       </div>
     </div>
-    <nav class="border-t border-black/10 py-2.5 flex justify-center gap-8 text-[12px] text-ink/75">
-      <a href="#manifeste" class="hover:text-paprika transition">Manifeste</a>
-      <a href="#sommaire" class="hover:text-paprika transition">Sommaire</a>
-      <a href="#extrait" class="hover:text-paprika transition">Extrait</a>
-      <a href="#auteur" class="hover:text-paprika transition">L'auteur</a>
-      <a href="#temoignages" class="hover:text-paprika transition">Lecteurs</a>
-      <a href="#commander" class="hover:text-paprika transition">Commander</a>
+    <div class="hair-gold"></div>
+    <nav class="py-3 flex flex-wrap justify-center gap-x-8 gap-y-2 text-[11px] tracking-[0.22em] uppercase text-ink/75">
+      <a href="#manifeste" class="hover:text-oxblood transition">Manifeste</a>
+      <span class="text-gold/60">·</span>
+      <a href="#sommaire" class="hover:text-oxblood transition">Sommaire</a>
+      <span class="text-gold/60">·</span>
+      <a href="#extrait" class="hover:text-oxblood transition">Extrait</a>
+      <span class="text-gold/60">·</span>
+      <a href="#auteur" class="hover:text-oxblood transition">L'auteur</a>
+      <span class="text-gold/60">·</span>
+      <a href="#temoignages" class="hover:text-oxblood transition">Lecteurs</a>
+      <span class="text-gold/60">·</span>
+      <a href="#commander" class="hover:text-oxblood transition">Commander</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO / COVER -->
-<section class="relative border-b rule border-black/15">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-14 md:py-24">
+<section class="relative paper border-b rule overflow-hidden">
+  <div class="grain-light absolute inset-0"></div>
+  <div class="relative max-w-[1440px] mx-auto px-6 md:px-12 pt-16 md:pt-24 pb-20 md:pb-32">
+
+    <div class="rise d1 flex items-center justify-between mb-14 md:mb-20">
+      <div class="flex items-center gap-6">
+        <span class="label-lg text-oxblood">Numéro 01</span>
+        <span class="w-2 h-2 bg-gold rotate-45"></span>
+        <span class="label-lg text-ink/55 hidden md:inline">Édition Reliée · Tirage limité</span>
+      </div>
+      <span class="label-lg text-ink/55 hidden md:inline num">MMXXVI</span>
+    </div>
+
     <div class="grid grid-cols-12 gap-8 md:gap-12 items-center">
       <div class="col-span-12 md:col-span-7 relative">
-        <div class="rise d1 flex items-center gap-4 mb-8">
-          <span class="label text-paprika">Vol. 01 · N°01</span>
-          <div class="flex-1 hair"></div>
-          <span class="label text-ink/60">Traité — 148 pages</span>
-        </div>
 
-        <h1 class="rise d2 serif text-ink font-medium leading-[0.9] tracking-[-0.02em] text-[54px] sm:text-[80px] md:text-[112px] lg:text-[132px]">
+        <h1 class="rise d2 display text-ink text-[64px] sm:text-[92px] md:text-[132px] lg:text-[160px] leading-[0.86]">
           Le<br/>
-          <span class="serif-italic text-paprika">Braquage</span><br/>
-          du Fast Food.
+          <span class="display-i text-oxblood">Braquage</span><br/>
+          du Fast&nbsp;Food.
         </h1>
 
-        <div class="rise d3 mt-8 max-w-[540px]">
-          <p class="serif-text text-[19px] md:text-[21px] leading-[1.5] text-ink/85">
-            <span class="label text-ink/60 mr-2">Manifeste —</span>
-            Comment un local devient une marque, comment une marque devient un empire, et pourquoi presque personne n'y arrive.
+        <div class="rise d3 mt-10 max-w-[560px] flex gap-6">
+          <div class="hair-gold w-16 mt-4 shrink-0"></div>
+          <p class="body-serif text-[19px] md:text-[21px] leading-[1.55] text-ink/85">
+            <span class="body-serif-i text-oxblood">Traité —</span> comment un local devient une marque, comment une marque devient un empire, et pourquoi presque personne n'y arrive.
           </p>
         </div>
 
-        <div class="rise d4 mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-          <a href="#commander" class="group inline-flex items-center gap-3 bg-ink text-cream px-7 py-4 rounded-full font-medium hover:bg-paprika transition">
-            <span>Commander l'édition —  297€</span>
-            <span class="w-7 h-7 rounded-full bg-cream text-ink flex items-center justify-center group-hover:translate-x-1 transition">→</span>
+        <div class="rise d4 mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+          <a href="#commander" class="group inline-flex items-center gap-4 bg-ink text-cream pl-7 pr-5 py-4 hover:bg-oxblood transition">
+            <span class="label-lg">Commander l'édition</span>
+            <span class="w-8 h-8 border border-cream/40 flex items-center justify-center group-hover:translate-x-1 transition">→</span>
           </a>
-          <a href="#extrait" class="serif-italic text-[17px] text-ink/75 hover:text-paprika transition underline underline-offset-4 decoration-black/20">
+          <a href="#extrait" class="serif-i text-[18px] text-ink/75 hover:text-oxblood transition link-under">
             Lire un extrait
           </a>
         </div>
 
-        <div class="rise d5 mt-14 grid grid-cols-3 gap-8 max-w-md">
+        <div class="rise d5 mt-16 grid grid-cols-3 gap-8 max-w-lg">
           <div>
-            <div class="serif text-3xl md:text-4xl text-ink">148</div>
-            <div class="label text-ink/60 mt-1">Pages</div>
+            <div class="display-med text-ink text-4xl md:text-5xl num-lining">148</div>
+            <div class="label text-ink/55 mt-2">Pages</div>
           </div>
           <div>
-            <div class="serif text-3xl md:text-4xl text-ink">07</div>
-            <div class="label text-ink/60 mt-1">Chapitres</div>
+            <div class="display-med text-ink text-4xl md:text-5xl">VII</div>
+            <div class="label text-ink/55 mt-2">Chapitres</div>
           </div>
           <div>
-            <div class="serif text-3xl md:text-4xl text-ink">500</div>
-            <div class="label text-ink/60 mt-1">Exemplaires</div>
+            <div class="display-med text-oxblood text-4xl md:text-5xl num-lining">500</div>
+            <div class="label text-oxblood/80 mt-2">Exemplaires</div>
           </div>
         </div>
       </div>
 
       <div class="col-span-12 md:col-span-5 flex justify-center md:justify-end">
-        <div class="relative">
-          <div class="absolute -inset-6 bg-paprika/10 rounded-sm rotate-2"></div>
-          <div class="relative w-[280px] md:w-[340px] aspect-[3/4] bg-ink text-cream p-6 md:p-8 flex flex-col justify-between grain overflow-hidden shadow-[0_40px_60px_-20px_rgba(0,0,0,0.35)]">
-            <div>
-              <div class="flex items-center justify-between">
-                <span class="label text-cream/60">PoP·Way</span>
-                <span class="label text-cream/60">N°01</span>
-              </div>
-              <div class="hair-dark mt-3"></div>
-              <div class="mt-10">
-                <div class="serif text-cream text-5xl md:text-6xl leading-[0.9] tracking-tight">Le<br/><span class="serif-italic text-paprika">Braquage</span></div>
-                <div class="serif text-cream/85 text-xl md:text-2xl mt-3 leading-tight">du Fast Food.</div>
+        <div class="relative rise d3">
+          <!-- shadow plane -->
+          <div class="absolute -inset-x-8 -bottom-10 h-24 bg-black/25 blur-2xl rounded-[50%]"></div>
+          <!-- pedestal -->
+          <div class="relative flex">
+            <!-- spine -->
+            <div class="w-4 md:w-5 aspect-[1/12] bg-oxblood-2 book-spine relative">
+              <div class="absolute inset-0 flex flex-col items-center justify-center">
+                <div class="serif text-cream/70 text-[9px] tracking-widest uppercase" style="writing-mode:vertical-rl; transform:rotate(180deg);">N°01 · Le Braquage · PoP·Way</div>
               </div>
             </div>
-            <div>
-              <div class="hair-dark mb-3"></div>
-              <div class="flex items-end justify-between">
+            <!-- cover -->
+            <div class="book relative w-[300px] md:w-[360px] aspect-[3/4.2] grain overflow-hidden">
+              <!-- corner ornaments -->
+              <div class="absolute top-4 left-4 right-4 bottom-4 border border-gold/40 pointer-events-none"></div>
+              <div class="absolute top-6 left-6 right-6 bottom-6 border border-gold/20 pointer-events-none"></div>
+
+              <div class="relative h-full flex flex-col justify-between p-8 md:p-10">
                 <div>
-                  <div class="label text-cream/50">Un traité par</div>
-                  <div class="serif-italic text-cream text-lg mt-1">Le fondateur de PoP'Way</div>
+                  <div class="text-center">
+                    <div class="label-lg text-gold">PoP · Way</div>
+                    <div class="ornament text-gold/50 mt-3 mb-6 label"><span>Numéro 01</span></div>
+                  </div>
+                  <div class="text-center mt-2">
+                    <div class="display foil text-5xl md:text-[68px] leading-[0.88]">Le<br/><span class="display-i">Braquage</span></div>
+                    <div class="serif text-cream/80 text-lg md:text-xl mt-4 tracking-tight">du Fast&nbsp;Food.</div>
+                  </div>
                 </div>
-                <div class="serif text-paprika text-4xl leading-none">01</div>
+
+                <div class="text-center">
+                  <div class="ornament text-gold/50 label mb-4"><span>Traité en Sept Parties</span></div>
+                  <div class="serif-i text-cream/65 text-sm">par le fondateur de PoP'Way</div>
+                  <div class="hair-dark mt-6 w-24 mx-auto"></div>
+                  <div class="label text-gold/70 mt-4 num-lining">MMXXVI</div>
+                </div>
               </div>
             </div>
+          </div>
+
+          <div class="mt-6 text-center serif-i text-ink/50 text-sm">
+            Reliure premium — 148 pages · fig. 1
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- bottom masthead footer -->
+  <div class="relative border-t rule">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-4 flex items-center justify-between text-[10px] tracking-[0.3em] uppercase text-ink/55">
+      <span>Alger · Paris · Bruxelles · Montréal</span>
+      <span class="hidden md:inline">Une publication PoP'Way — imprimée en Europe</span>
+      <span>© MMXXVI</span>
+    </div>
+  </div>
 </section>
 
-<!-- TICKER -->
-<div class="border-b rule border-black/15 overflow-hidden bg-ink text-cream py-3">
+<!-- TICKER (subtle) -->
+<div class="border-b rule bg-ink text-cream overflow-hidden py-4">
   <div class="ticker flex whitespace-nowrap">
-    <div class="flex gap-12 pr-12 serif-italic text-lg">
+    <div class="flex items-center gap-14 pr-14 serif-i text-lg text-cream/85">
       <span>« Le seul livre sur le fast food que j'ai lu deux fois. »</span>
-      <span class="text-paprika">◆</span>
+      <span class="text-gold text-xs">◆</span>
       <span>« Une lecture obligatoire avant d'ouvrir un local. »</span>
-      <span class="text-paprika">◆</span>
-      <span>« Rien à voir avec les formations à 50€. »</span>
-      <span class="text-paprika">◆</span>
+      <span class="text-gold text-xs">◆</span>
+      <span>« Rien à voir avec les formations à cinquante euros. »</span>
+      <span class="text-gold text-xs">◆</span>
       <span>« Franc, direct, sans jargon. »</span>
-      <span class="text-paprika">◆</span>
+      <span class="text-gold text-xs">◆</span>
+      <span>« Le chapitre sept vaut à lui seul le prix du livre. »</span>
+      <span class="text-gold text-xs">◆</span>
     </div>
-    <div class="flex gap-12 pr-12 serif-italic text-lg">
+    <div class="flex items-center gap-14 pr-14 serif-i text-lg text-cream/85">
       <span>« Le seul livre sur le fast food que j'ai lu deux fois. »</span>
-      <span class="text-paprika">◆</span>
+      <span class="text-gold text-xs">◆</span>
       <span>« Une lecture obligatoire avant d'ouvrir un local. »</span>
-      <span class="text-paprika">◆</span>
-      <span>« Rien à voir avec les formations à 50€. »</span>
-      <span class="text-paprika">◆</span>
+      <span class="text-gold text-xs">◆</span>
+      <span>« Rien à voir avec les formations à cinquante euros. »</span>
+      <span class="text-gold text-xs">◆</span>
       <span>« Franc, direct, sans jargon. »</span>
-      <span class="text-paprika">◆</span>
+      <span class="text-gold text-xs">◆</span>
+      <span>« Le chapitre sept vaut à lui seul le prix du livre. »</span>
+      <span class="text-gold text-xs">◆</span>
     </div>
   </div>
 </div>
 
 <!-- MANIFESTE -->
-<section id="manifeste" class="border-b rule border-black/15">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-32">
+<section id="manifeste" class="border-b rule relative">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-24 md:py-40">
+    <div class="text-center mb-16 md:mb-24">
+      <div class="ornament-diamond text-ink/60 label"><span>§ 01 — Manifeste</span></div>
+    </div>
+
     <div class="grid grid-cols-12 gap-8 md:gap-12">
-      <aside class="col-span-12 md:col-span-3">
-        <div class="label text-paprika mb-3">§ 01 — Manifeste</div>
-        <div class="serif-italic text-ink/70 text-lg leading-snug">Pourquoi ce livre existe.</div>
-      </aside>
-      <div class="col-span-12 md:col-span-9 md:col-start-4 max-w-[720px]">
-        <p class="serif text-ink text-[34px] md:text-[46px] leading-[1.1] tracking-[-0.01em] mb-10">
-          On nous a vendu que la restauration rapide, c'était un pari.<br class="hidden md:block"/>
-          <span class="serif-italic text-paprika">Ce n'en est pas un.</span>
+      <div class="col-span-12 md:col-span-10 md:col-start-2 max-w-4xl mx-auto">
+        <p class="display text-ink text-[36px] md:text-[56px] lg:text-[68px] leading-[1.05] tracking-[-0.02em] mb-16 text-center">
+          On nous a vendu que la restauration rapide,<br class="hidden md:block"/>
+          c'était un pari.<br/>
+          <span class="display-i text-oxblood">Ce n'en est pas un.</span>
         </p>
-        <p class="serif-text text-[18px] md:text-[19px] leading-[1.7] text-ink/85 dropcap">
-          En quatre ans, PoP'Way est passé d'un local unique à la première marque de street food en Algérie. Cinq restaurants ouverts. Quatre en construction. Une file d'attente pour la franchise. Aucun héritage, aucune école de commerce, aucun investisseur providentiel. Un système. Ce livre est ce système, écrit sans filtre, sans jargon de consultant, sans les vingt pages de remplissage qui font vendre les formations à 50€.
-        </p>
-        <p class="serif-text text-[18px] md:text-[19px] leading-[1.7] text-ink/85 mt-6">
-          Vous n'y trouverez pas de « mindset ». Vous y trouverez le calcul exact d'un food cost, la structure d'une carte qui double le panier moyen, le protocole qui permet à une cuisine de sortir 300 commandes en heure de rush sans jamais baisser la qualité, et le playbook complet pour transformer une enseigne locale en franchise nationale.
-        </p>
-        <div class="mt-10 border-l-2 border-paprika pl-6">
-          <p class="serif-italic text-[22px] md:text-[26px] leading-[1.35] text-ink">
-            « Si vous ouvrez un fast food sans avoir lu ceci, vous ne prenez pas un risque — vous jouez au loto. »
+
+        <div class="hair-gold mx-auto w-24 mb-14"></div>
+
+        <div class="two-col body-serif text-[18px] md:text-[19px] leading-[1.75] text-ink/85">
+          <p class="dropcap mb-6">
+            En quatre ans, PoP'Way est passé d'un local unique à la première marque de street food en Algérie. Cinq restaurants ouverts. Quatre en construction. Une file d'attente pour la franchise. Aucun héritage, aucune école de commerce, aucun investisseur providentiel. Un système.
           </p>
-          <div class="label text-ink/60 mt-4">— L'auteur, avant-propos</div>
+          <p class="mb-6">
+            Ce livre est ce système, écrit sans filtre, sans jargon de consultant, sans les vingt pages de remplissage qui font vendre les formations à cinquante euros. Vous n'y trouverez pas de « mindset ».
+          </p>
+          <p class="mb-6">
+            Vous y trouverez le calcul exact d'un food cost, la structure d'une carte qui double le panier moyen, le protocole qui permet à une cuisine de sortir trois cents commandes en heure de rush sans jamais baisser la qualité, et le playbook complet pour transformer une enseigne locale en franchise nationale.
+          </p>
+          <p>
+            Chaque chapitre est court, dense, applicable. Chacun contient au moins une annexe pratique : feuille de calcul, checklist, modèle de contrat. Rien n'y est théorique.
+          </p>
+        </div>
+
+        <div class="mt-16 border-t border-b border-oxblood py-10 md:py-12 text-center">
+          <p class="display-i text-ink text-[26px] md:text-[36px] leading-[1.25] max-w-3xl mx-auto">
+            « Si vous ouvrez un fast food sans avoir lu ceci,<br class="hidden md:block"/>
+            vous ne prenez pas un risque —<br class="hidden md:block"/>
+            <span class="text-oxblood">vous jouez au loto.</span> »
+          </p>
+          <div class="label text-ink/55 mt-6">— L'auteur, avant-propos</div>
         </div>
       </div>
     </div>
@@ -259,182 +404,188 @@
 </section>
 
 <!-- SOMMAIRE -->
-<section id="sommaire" class="border-b rule border-black/15 bg-cream-2/40">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-32">
-    <div class="grid grid-cols-12 gap-8 md:gap-12 mb-14">
-      <div class="col-span-12 md:col-span-3">
-        <div class="label text-paprika mb-3">§ 02 — Sommaire</div>
-      </div>
-      <div class="col-span-12 md:col-span-9">
-        <h2 class="serif text-ink text-[44px] md:text-[64px] leading-[0.95] tracking-tight">
-          Sept chapitres.<br/>
-          <span class="serif-italic text-ink/65">Aucun rembourrage.</span>
-        </h2>
-      </div>
+<section id="sommaire" class="border-b rule bg-cream-2/60 relative">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-24 md:py-40">
+
+    <div class="text-center mb-14 md:mb-20">
+      <div class="ornament-diamond text-ink/60 label mb-8"><span>§ 02 — Sommaire</span></div>
+      <h2 class="display text-ink text-[52px] md:text-[80px] lg:text-[104px] leading-[0.92]">
+        Sept chapitres.<br/>
+        <span class="display-i text-ink/60">Aucun rembourrage.</span>
+      </h2>
+      <div class="hair-gold mx-auto w-24 mt-10"></div>
+      <p class="serif-i text-ink/70 text-lg mt-8 max-w-xl mx-auto leading-relaxed">
+        Chaque chapitre est un module autonome, lisible en une demi-heure. Aucun ne pourrait manquer sans que l'ensemble s'effondre.
+      </p>
     </div>
 
-    <div class="grid grid-cols-12 gap-8 md:gap-12">
-      <div class="col-span-12 md:col-span-3">
-        <div class="serif-italic text-ink/70 text-lg leading-snug">
-          Chaque chapitre est un module autonome, lisible en une demi-heure. Aucun ne pourrait manquer sans que l'ensemble s'effondre.
-        </div>
-      </div>
-      <div class="col-span-12 md:col-span-9">
-        <ol class="space-y-0">
-          <li class="border-t rule border-black/15 py-6 md:py-7">
-            <div class="toc-row">
-              <div class="serif text-paprika text-2xl md:text-3xl w-16">I</div>
-              <div>
-                <div class="serif text-ink text-2xl md:text-[28px] leading-tight">Le Concept qui s'imprime dans la rue</div>
-                <div class="serif-text text-ink/65 text-[15px] leading-relaxed mt-1.5 max-w-2xl">Fabriquer une identité qu'on reconnaît à cinquante mètres. Nom, signature visuelle, ton, rituel — la mécanique complète.</div>
-              </div>
-              <div class="label text-ink/55 hidden md:block">p. 09</div>
+    <div class="max-w-4xl mx-auto mt-16">
+      <ol class="col-rules border-t border-b rule">
+        <li class="py-7 md:py-8 hover:bg-cream/60 transition group">
+          <div class="toc-row">
+            <div class="roman text-oxblood text-2xl md:text-3xl">I</div>
+            <div>
+              <div class="serif text-ink text-2xl md:text-[30px] leading-tight group-hover:text-oxblood transition">Le Concept qui s'imprime dans la rue</div>
+              <div class="body-serif text-ink/65 text-[15px] leading-relaxed mt-2 max-w-2xl">Fabriquer une identité qu'on reconnaît à cinquante mètres. Nom, signature visuelle, ton, rituel — la mécanique complète.</div>
             </div>
-          </li>
-          <li class="border-t rule border-black/15 py-6 md:py-7">
-            <div class="toc-row">
-              <div class="serif text-paprika text-2xl md:text-3xl w-16">II</div>
-              <div>
-                <div class="serif text-ink text-2xl md:text-[28px] leading-tight">La Carte comme un algorithme</div>
-                <div class="serif-text text-ink/65 text-[15px] leading-relaxed mt-1.5 max-w-2xl">Combien de produits, à quels prix, avec quelle hiérarchie. La règle 80/20 appliquée à un menu, les combos, les produits d'appel.</div>
-              </div>
-              <div class="label text-ink/55 hidden md:block">p. 31</div>
+            <div class="label text-ink/50 hidden md:block num-lining">p. 009</div>
+          </div>
+        </li>
+        <li class="py-7 md:py-8 hover:bg-cream/60 transition group">
+          <div class="toc-row">
+            <div class="roman text-oxblood text-2xl md:text-3xl">II</div>
+            <div>
+              <div class="serif text-ink text-2xl md:text-[30px] leading-tight group-hover:text-oxblood transition">La Carte comme un algorithme</div>
+              <div class="body-serif text-ink/65 text-[15px] leading-relaxed mt-2 max-w-2xl">Combien de produits, à quels prix, avec quelle hiérarchie. La règle 80/20 appliquée à un menu, les combos, les produits d'appel.</div>
             </div>
-          </li>
-          <li class="border-t rule border-black/15 py-6 md:py-7">
-            <div class="toc-row">
-              <div class="serif text-paprika text-2xl md:text-3xl w-16">III</div>
-              <div>
-                <div class="serif text-ink text-2xl md:text-[28px] leading-tight">Marges &amp; food cost — sans mensonge</div>
-                <div class="serif-text text-ink/65 text-[15px] leading-relaxed mt-1.5 max-w-2xl">Le vrai calcul. Ce que les fournisseurs cachent. Comment récupérer trente pour cent sur chaque burger sans jamais toucher au prix affiché.</div>
-              </div>
-              <div class="label text-ink/55 hidden md:block">p. 52</div>
+            <div class="label text-ink/50 hidden md:block num-lining">p. 031</div>
+          </div>
+        </li>
+        <li class="py-7 md:py-8 hover:bg-cream/60 transition group">
+          <div class="toc-row">
+            <div class="roman text-oxblood text-2xl md:text-3xl">III</div>
+            <div>
+              <div class="serif text-ink text-2xl md:text-[30px] leading-tight group-hover:text-oxblood transition">Marges &amp; food cost — sans mensonge</div>
+              <div class="body-serif text-ink/65 text-[15px] leading-relaxed mt-2 max-w-2xl">Le vrai calcul. Ce que les fournisseurs cachent. Comment récupérer trente pour cent sur chaque burger sans jamais toucher au prix affiché.</div>
             </div>
-          </li>
-          <li class="border-t rule border-black/15 py-6 md:py-7">
-            <div class="toc-row">
-              <div class="serif text-paprika text-2xl md:text-3xl w-16">IV</div>
-              <div>
-                <div class="serif text-ink text-2xl md:text-[28px] leading-tight">L'équipe — recruter, former, retenir</div>
-                <div class="serif-text text-ink/65 text-[15px] leading-relaxed mt-1.5 max-w-2xl">Transformer un poste de cuisine en mission. La méthode qui explique pourquoi, chez nous, personne ne démissionne au bout de trois mois.</div>
-              </div>
-              <div class="label text-ink/55 hidden md:block">p. 73</div>
+            <div class="label text-ink/50 hidden md:block num-lining">p. 052</div>
+          </div>
+        </li>
+        <li class="py-7 md:py-8 hover:bg-cream/60 transition group">
+          <div class="toc-row">
+            <div class="roman text-oxblood text-2xl md:text-3xl">IV</div>
+            <div>
+              <div class="serif text-ink text-2xl md:text-[30px] leading-tight group-hover:text-oxblood transition">L'équipe — recruter, former, retenir</div>
+              <div class="body-serif text-ink/65 text-[15px] leading-relaxed mt-2 max-w-2xl">Transformer un poste de cuisine en mission. La méthode qui explique pourquoi, chez nous, personne ne démissionne au bout de trois mois.</div>
             </div>
-          </li>
-          <li class="border-t rule border-black/15 py-6 md:py-7">
-            <div class="toc-row">
-              <div class="serif text-paprika text-2xl md:text-3xl w-16">V</div>
-              <div>
-                <div class="serif text-ink text-2xl md:text-[28px] leading-tight">Marketing de rue — Instagram &amp; TikTok</div>
-                <div class="serif-text text-ink/65 text-[15px] leading-relaxed mt-1.5 max-w-2xl">Comment PoP'Way est passé de zéro à 44 000 abonnés sans un centime de publicité. Templates, fréquence, ton, calendrier.</div>
-              </div>
-              <div class="label text-ink/55 hidden md:block">p. 92</div>
+            <div class="label text-ink/50 hidden md:block num-lining">p. 073</div>
+          </div>
+        </li>
+        <li class="py-7 md:py-8 hover:bg-cream/60 transition group">
+          <div class="toc-row">
+            <div class="roman text-oxblood text-2xl md:text-3xl">V</div>
+            <div>
+              <div class="serif text-ink text-2xl md:text-[30px] leading-tight group-hover:text-oxblood transition">Marketing de rue — Instagram &amp; TikTok</div>
+              <div class="body-serif text-ink/65 text-[15px] leading-relaxed mt-2 max-w-2xl">Comment PoP'Way est passé de zéro à 44 000 abonnés sans un centime de publicité. Templates, fréquence, ton, calendrier.</div>
             </div>
-          </li>
-          <li class="border-t rule border-black/15 py-6 md:py-7">
-            <div class="toc-row">
-              <div class="serif text-paprika text-2xl md:text-3xl w-16">VI</div>
-              <div>
-                <div class="serif text-ink text-2xl md:text-[28px] leading-tight">L'opération — la cuisine sous pression</div>
-                <div class="serif-text text-ink/65 text-[15px] leading-relaxed mt-1.5 max-w-2xl">Sortir trois cents commandes en heure de pointe sans jamais baisser la qualité. Plan de production, postes, checklists, protocoles d'urgence.</div>
-              </div>
-              <div class="label text-ink/55 hidden md:block">p. 111</div>
+            <div class="label text-ink/50 hidden md:block num-lining">p. 092</div>
+          </div>
+        </li>
+        <li class="py-7 md:py-8 hover:bg-cream/60 transition group">
+          <div class="toc-row">
+            <div class="roman text-oxblood text-2xl md:text-3xl">VI</div>
+            <div>
+              <div class="serif text-ink text-2xl md:text-[30px] leading-tight group-hover:text-oxblood transition">L'opération — la cuisine sous pression</div>
+              <div class="body-serif text-ink/65 text-[15px] leading-relaxed mt-2 max-w-2xl">Sortir trois cents commandes en heure de pointe sans jamais baisser la qualité. Plan de production, postes, checklists, protocoles d'urgence.</div>
             </div>
-          </li>
-          <li class="border-t border-b border-paprika py-8 bg-paprika text-cream px-6 -mx-6 md:px-8 md:-mx-8">
-            <div class="toc-row">
-              <div class="serif text-cream text-2xl md:text-3xl w-16">VII</div>
-              <div>
-                <div class="serif text-cream text-2xl md:text-[30px] leading-tight">Devenir une franchise <span class="serif-italic text-cream/80">— le chapitre-bonus</span></div>
-                <div class="serif-text text-cream/85 text-[15px] leading-relaxed mt-1.5 max-w-2xl">Structurer un concept pour qu'il se duplique. Contrats, redevances, formation, contrôle qualité — le playbook pour passer d'un local à cent restaurants.</div>
-              </div>
-              <div class="label text-cream/70 hidden md:block">p. 129</div>
+            <div class="label text-ink/50 hidden md:block num-lining">p. 111</div>
+          </div>
+        </li>
+        <li class="py-8 md:py-10 bg-ink text-cream -mx-6 md:-mx-10 px-6 md:px-10 group">
+          <div class="toc-row">
+            <div class="roman text-gold text-3xl md:text-4xl">VII</div>
+            <div>
+              <div class="serif text-cream text-2xl md:text-[32px] leading-tight">Devenir une franchise <span class="serif-i text-gold">— le chapitre-bonus</span></div>
+              <div class="body-serif text-cream/75 text-[15px] leading-relaxed mt-2 max-w-2xl">Structurer un concept pour qu'il se duplique. Contrats, redevances, formation, contrôle qualité — le playbook pour passer d'un local à cent restaurants.</div>
             </div>
-          </li>
-        </ol>
-      </div>
+            <div class="label text-gold/80 hidden md:block num-lining">p. 129</div>
+          </div>
+        </li>
+      </ol>
     </div>
   </div>
 </section>
 
 <!-- EXTRAIT -->
-<section id="extrait" class="border-b rule border-black/15 bg-ink text-cream relative overflow-hidden">
-  <div class="absolute inset-0 grain opacity-30"></div>
-  <div class="relative max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-32">
-    <div class="grid grid-cols-12 gap-8 md:gap-12">
-      <div class="col-span-12 md:col-span-3">
-        <div class="label text-paprika mb-3">§ 03 — Extrait</div>
-        <div class="serif-italic text-cream/70 text-lg leading-snug">Chapitre III — Marges &amp; food cost.</div>
+<section id="extrait" class="border-b rule bg-ink text-cream relative overflow-hidden">
+  <div class="grain absolute inset-0 opacity-40"></div>
+  <div class="relative max-w-[1440px] mx-auto px-6 md:px-12 py-24 md:py-40">
+    <div class="text-center mb-14 md:mb-20">
+      <div class="ornament-diamond text-cream/60 label mb-6"><span>§ 03 — Extrait</span></div>
+      <div class="serif-i text-cream/70 text-lg">Chapitre III · Marges &amp; food cost — page 054.</div>
+    </div>
+
+    <div class="max-w-3xl mx-auto">
+      <div class="border-t border-b border-cream/20 py-10 md:py-14 mb-12 md:mb-16 text-center">
+        <div class="display text-cream text-[36px] md:text-[56px] leading-[1.05] tracking-[-0.02em]">
+          « Le fournisseur ne veut<br/>pas votre bien.<br/>
+          <span class="display-i text-gold">Il veut sa marge.</span> »
+        </div>
       </div>
-      <div class="col-span-12 md:col-span-9 md:col-start-4 max-w-[720px]">
-        <div class="border-t border-b border-cream/15 py-8 mb-10">
-          <div class="label text-cream/60 mb-2">Page 54</div>
-          <div class="serif text-cream text-[32px] md:text-[42px] leading-[1.1] tracking-tight">
-            « Le fournisseur ne veut pas votre bien.<br/>Il veut sa marge. »
-          </div>
-        </div>
-        <p class="serif-text text-[18px] leading-[1.7] text-cream/90 dropcap">
-          La première fois qu'un commercial vous présente son catalogue, il vous montre le prix par kilo. C'est déjà un piège. Ce qui compte n'est pas ce que vous payez la matière, mais ce qui reste dans l'assiette une fois retirés la coupe, la cuisson, la casse et le vol interne. Ce chiffre-là — le vrai coût matière — ne figure sur aucun devis. Il faut l'extraire, chaque semaine, produit par produit.
-        </p>
-        <p class="serif-text text-[18px] leading-[1.7] text-cream/90 mt-5">
-          Chez PoP'Way, nous avons construit une feuille de calcul qui fait ce travail à notre place. Elle a permis de faire baisser notre food cost de trente-huit à vingt-sept pour cent en deux mois — sans changer un seul fournisseur, sans toucher à un prix affiché. Cette feuille est reproduite en annexe. Le chapitre qui suit explique comment la lire.
-        </p>
-        <div class="mt-10 pt-8 border-t border-cream/15 flex items-center justify-between">
-          <div class="serif-italic text-cream/60 text-sm">— Suite au chapitre IV.</div>
-          <a href="#commander" class="text-paprika serif-italic underline underline-offset-4 hover:text-cream transition">Lire la suite →</a>
-        </div>
+
+      <p class="body-serif text-[19px] leading-[1.8] text-cream/90 dropcap">
+        La première fois qu'un commercial vous présente son catalogue, il vous montre le prix par kilo. C'est déjà un piège. Ce qui compte n'est pas ce que vous payez la matière, mais ce qui reste dans l'assiette une fois retirés la coupe, la cuisson, la casse et le vol interne. Ce chiffre-là — le vrai coût matière — ne figure sur aucun devis. Il faut l'extraire, chaque semaine, produit par produit.
+      </p>
+      <p class="body-serif text-[19px] leading-[1.8] text-cream/90 mt-6">
+        Chez PoP'Way, nous avons construit une feuille de calcul qui fait ce travail à notre place. Elle a permis de faire baisser notre food cost de <span class="serif-i text-gold">trente-huit</span> à <span class="serif-i text-gold">vingt-sept</span> pour cent en deux mois — sans changer un seul fournisseur, sans toucher à un prix affiché. Cette feuille est reproduite en annexe. Le chapitre qui suit explique comment la lire.
+      </p>
+
+      <div class="mt-16 flex items-center justify-between border-t border-cream/20 pt-8">
+        <div class="serif-i text-cream/55 text-sm">— Suite au chapitre IV.</div>
+        <a href="#commander" class="label-lg text-gold hover:text-cream transition inline-flex items-center gap-3">
+          Lire la suite <span class="text-lg">→</span>
+        </a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- AUTEUR -->
-<section id="auteur" class="border-b rule border-black/15">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-32">
-    <div class="grid grid-cols-12 gap-8 md:gap-12">
-      <div class="col-span-12 md:col-span-3">
-        <div class="label text-paprika mb-3">§ 04 — L'auteur</div>
-      </div>
-      <div class="col-span-12 md:col-span-9 grid grid-cols-12 gap-8 md:gap-12">
-        <div class="col-span-12 md:col-span-4">
-          <div class="aspect-[4/5] bg-ink relative overflow-hidden grain">
-            <div class="absolute inset-0 bg-gradient-to-br from-paprika/40 via-ink to-ink"></div>
-            <div class="absolute bottom-6 left-6 right-6">
-              <div class="label text-cream/60">Portrait</div>
-              <div class="serif text-cream text-2xl mt-1">Le fondateur de PoP'Way</div>
+<section id="auteur" class="border-b rule relative">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-24 md:py-40">
+    <div class="text-center mb-14 md:mb-20">
+      <div class="ornament-diamond text-ink/60 label"><span>§ 04 — L'auteur</span></div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-10 md:gap-16 items-center">
+      <div class="col-span-12 md:col-span-5">
+        <figure>
+          <div class="relative aspect-[4/5] overflow-hidden grain-light">
+            <div class="absolute inset-0 bg-gradient-to-br from-oxblood via-ink-2 to-ink"></div>
+            <div class="absolute inset-6 border border-gold/30"></div>
+            <div class="absolute bottom-8 left-8 right-8 text-center">
+              <div class="label text-gold mb-3">Portrait</div>
+              <div class="display text-cream text-3xl leading-tight">Le fondateur<br/><span class="display-i text-cream/80">de PoP'Way</span></div>
             </div>
           </div>
-          <div class="mt-4 label text-ink/55">Alger — 2026</div>
-        </div>
-        <div class="col-span-12 md:col-span-8">
-          <h2 class="serif text-ink text-[36px] md:text-[52px] leading-[1.05] tracking-[-0.01em]">
-            Écrit par celui qui l'a fait.<br/>
-            <span class="serif-italic text-ink/60">Pas par celui qui l'a étudié.</span>
-          </h2>
-          <p class="serif-text text-[18px] leading-[1.7] text-ink/85 mt-8 max-w-2xl">
-            Fondateur de PoP'Way, la première marque de street food d'Algérie. 158 publications, 44 200 abonnés, cinq restaurants ouverts, quatre en construction, une liste d'attente pour la franchise. Aucune formation formelle, aucun mentor providentiel — quatre années de terrain, de test, d'échec, et un système qui fonctionne aujourd'hui à grande échelle.
-          </p>
-          <p class="serif-italic text-[17px] leading-relaxed text-ink/70 mt-4 max-w-2xl">
-            Ce livre a été écrit entre deux services, dans l'arrière-cuisine du restaurant d'Alger-centre, sur un carnet à spirales que l'auteur relit encore parfois pour se souvenir des erreurs.
-          </p>
+          <figcaption class="mt-4 text-center serif-i text-ink/55 text-sm">
+            Alger, arrière-cuisine — printemps 2026.
+          </figcaption>
+        </figure>
+      </div>
 
-          <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="border-t rule border-black/25 pt-4">
-              <div class="serif text-ink text-4xl md:text-5xl leading-none">44K</div>
-              <div class="label text-ink/60 mt-2">Abonnés</div>
-            </div>
-            <div class="border-t rule border-black/25 pt-4">
-              <div class="serif text-ink text-4xl md:text-5xl leading-none">05</div>
-              <div class="label text-ink/60 mt-2">Restaurants</div>
-            </div>
-            <div class="border-t rule border-black/25 pt-4">
-              <div class="serif text-ink text-4xl md:text-5xl leading-none">04</div>
-              <div class="label text-ink/60 mt-2">En construction</div>
-            </div>
-            <div class="border-t border-paprika pt-4">
-              <div class="serif text-paprika text-4xl md:text-5xl leading-none">N°1</div>
-              <div class="label text-paprika mt-2">Street food · Algérie</div>
-            </div>
+      <div class="col-span-12 md:col-span-7">
+        <h2 class="display text-ink text-[40px] md:text-[64px] lg:text-[76px] leading-[0.95] tracking-[-0.02em]">
+          Écrit par celui<br/>
+          qui l'a fait —<br/>
+          <span class="display-i text-oxblood">pas par celui qui l'a étudié.</span>
+        </h2>
+
+        <div class="hair-gold w-24 mt-10 mb-8"></div>
+
+        <p class="body-serif text-[18px] leading-[1.75] text-ink/85 max-w-2xl">
+          Fondateur de PoP'Way, la première marque de street food d'Algérie. Cent cinquante-huit publications, quarante-quatre mille deux cents abonnés, cinq restaurants ouverts, quatre en construction, une liste d'attente pour la franchise. Aucune formation formelle, aucun mentor providentiel — quatre années de terrain, de test, d'échec, et un système qui fonctionne aujourd'hui à grande échelle.
+        </p>
+        <p class="body-serif-i text-[17px] leading-relaxed text-ink/65 mt-5 max-w-2xl">
+          Ce livre a été écrit entre deux services, dans l'arrière-cuisine du restaurant d'Alger-Centre, sur un carnet à spirales que l'auteur relit encore parfois pour se souvenir des erreurs.
+        </p>
+
+        <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-6">
+          <div class="border-t rule pt-4">
+            <div class="display-med text-ink text-4xl md:text-5xl leading-none num-lining">44K</div>
+            <div class="label text-ink/55 mt-2">Abonnés</div>
+          </div>
+          <div class="border-t rule pt-4">
+            <div class="display-med text-ink text-4xl md:text-5xl leading-none">V</div>
+            <div class="label text-ink/55 mt-2">Restaurants</div>
+          </div>
+          <div class="border-t rule pt-4">
+            <div class="display-med text-ink text-4xl md:text-5xl leading-none">IV</div>
+            <div class="label text-ink/55 mt-2">En construction</div>
+          </div>
+          <div class="border-t border-oxblood pt-4">
+            <div class="display-med text-oxblood text-4xl md:text-5xl leading-none">N°1</div>
+            <div class="label text-oxblood mt-2">Street food · DZ</div>
           </div>
         </div>
       </div>
@@ -443,59 +594,55 @@
 </section>
 
 <!-- TÉMOIGNAGES -->
-<section id="temoignages" class="border-b rule border-black/15 bg-cream-2/40">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-32">
-    <div class="grid grid-cols-12 gap-8 md:gap-12 mb-14">
-      <div class="col-span-12 md:col-span-3">
-        <div class="label text-paprika mb-3">§ 05 — Lecteurs</div>
-      </div>
-      <div class="col-span-12 md:col-span-9">
-        <h2 class="serif text-ink text-[44px] md:text-[64px] leading-[0.95] tracking-tight">
-          Ce qu'en disent<br/>
-          <span class="serif-italic text-ink/65">les premiers lecteurs.</span>
-        </h2>
-      </div>
+<section id="temoignages" class="border-b rule bg-cream-2/60 relative">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-24 md:py-40">
+    <div class="text-center mb-14 md:mb-20">
+      <div class="ornament-diamond text-ink/60 label mb-8"><span>§ 05 — Lecteurs</span></div>
+      <h2 class="display text-ink text-[44px] md:text-[72px] lg:text-[92px] leading-[0.95] tracking-[-0.02em]">
+        Ce qu'en disent<br/>
+        <span class="display-i text-ink/60">les premiers lecteurs.</span>
+      </h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-      <figure class="border-t-2 border-ink pt-6">
-        <div class="serif text-paprika text-6xl leading-none mb-4">“</div>
-        <blockquote class="serif text-[22px] md:text-[24px] leading-[1.3] text-ink">
-          Trois mois après avoir appliqué le chapitre sur les marges, mon food cost est passé de <span class="serif-italic">trente-huit</span> à <span class="serif-italic">vingt-sept</span> pour cent. Le livre se rembourse en deux semaines.
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-10 max-w-6xl mx-auto">
+      <figure class="text-center md:text-left">
+        <div class="text-oxblood display text-7xl leading-none mb-4">“</div>
+        <blockquote class="serif text-ink text-[22px] md:text-[24px] leading-[1.35]">
+          Trois mois après avoir appliqué le chapitre sur les marges, mon food cost est passé de <span class="serif-i text-oxblood">trente-huit</span> à <span class="serif-i text-oxblood">vingt-sept</span> pour cent. Le livre se rembourse en deux semaines.
         </blockquote>
-        <figcaption class="mt-6 flex items-center gap-3 border-t border-black/15 pt-4">
-          <div class="w-10 h-10 rounded-full bg-ink text-cream serif flex items-center justify-center text-lg">Y</div>
+        <figcaption class="mt-8 pt-4 border-t border-ink flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-ink text-cream serif flex items-center justify-center text-lg">Y</div>
           <div>
             <div class="serif text-ink text-[15px]">Yanis Meddah</div>
-            <div class="label text-ink/55 mt-0.5">Burger shop · Oran</div>
+            <div class="label text-ink/55 mt-1">Burger Shop · Oran</div>
           </div>
         </figcaption>
       </figure>
 
-      <figure class="border-t-2 border-ink pt-6">
-        <div class="serif text-paprika text-6xl leading-none mb-4">“</div>
-        <blockquote class="serif text-[22px] md:text-[24px] leading-[1.3] text-ink">
-          Je pensais ouvrir mon snack à l'instinct. J'ai tout refait après cette lecture — concept, carte, équipe. Aujourd'hui je fais <span class="serif-italic">trois fois</span> le chiffre de mes concurrents, dans la même rue.
+      <figure class="text-center md:text-left">
+        <div class="text-oxblood display text-7xl leading-none mb-4">“</div>
+        <blockquote class="serif text-ink text-[22px] md:text-[24px] leading-[1.35]">
+          Je pensais ouvrir mon snack à l'instinct. J'ai tout refait après cette lecture — concept, carte, équipe. Aujourd'hui je fais <span class="serif-i text-oxblood">trois fois</span> le chiffre de mes concurrents, dans la même rue.
         </blockquote>
-        <figcaption class="mt-6 flex items-center gap-3 border-t border-black/15 pt-4">
-          <div class="w-10 h-10 rounded-full bg-ink text-cream serif flex items-center justify-center text-lg">N</div>
+        <figcaption class="mt-8 pt-4 border-t border-ink flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-ink text-cream serif flex items-center justify-center text-lg">N</div>
           <div>
             <div class="serif text-ink text-[15px]">Nadia Belkacem</div>
-            <div class="label text-ink/55 mt-0.5">Snack · Alger-Centre</div>
+            <div class="label text-ink/55 mt-1">Snack · Alger-Centre</div>
           </div>
         </figcaption>
       </figure>
 
-      <figure class="border-t-2 border-ink pt-6">
-        <div class="serif text-paprika text-6xl leading-none mb-4">“</div>
-        <blockquote class="serif text-[22px] md:text-[24px] leading-[1.3] text-ink">
-          Franc, direct, aucun blabla. Le seul livre où j'ai souligné une phrase toutes les deux pages. Le chapitre <span class="serif-italic">sept</span> sur la franchise vaut à lui seul le prix de l'ouvrage.
+      <figure class="text-center md:text-left">
+        <div class="text-oxblood display text-7xl leading-none mb-4">“</div>
+        <blockquote class="serif text-ink text-[22px] md:text-[24px] leading-[1.35]">
+          Franc, direct, aucun blabla. Le seul livre où j'ai souligné une phrase toutes les deux pages. Le chapitre <span class="serif-i text-oxblood">sept</span> sur la franchise vaut à lui seul le prix de l'ouvrage.
         </blockquote>
-        <figcaption class="mt-6 flex items-center gap-3 border-t border-black/15 pt-4">
-          <div class="w-10 h-10 rounded-full bg-ink text-cream serif flex items-center justify-center text-lg">K</div>
+        <figcaption class="mt-8 pt-4 border-t border-ink flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-ink text-cream serif flex items-center justify-center text-lg">K</div>
           <div>
             <div class="serif text-ink text-[15px]">Karim Dahmani</div>
-            <div class="label text-ink/55 mt-0.5">Chaîne de tacos · Constantine</div>
+            <div class="label text-ink/55 mt-1">Chaîne de tacos · Constantine</div>
           </div>
         </figcaption>
       </figure>
@@ -503,55 +650,64 @@
   </div>
 </section>
 
-<!-- PRIX / COMMANDER -->
-<section id="commander" class="border-b rule border-black/15">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-32">
-    <div class="grid grid-cols-12 gap-8 md:gap-12">
-      <div class="col-span-12 md:col-span-3">
-        <div class="label text-paprika mb-3">§ 06 — Édition</div>
-      </div>
-      <div class="col-span-12 md:col-span-9">
-        <h2 class="serif text-ink text-[44px] md:text-[64px] leading-[0.95] tracking-tight mb-4">
-          Une édition limitée<br/>
-          <span class="serif-italic text-ink/65">à cinq cents exemplaires.</span>
-        </h2>
-        <p class="serif-text text-ink/70 text-lg leading-relaxed max-w-xl">
-          Paiement unique. Accès à vie au PDF et à toutes les mises à jour futures.
-        </p>
+<!-- COMMANDER -->
+<section id="commander" class="border-b rule relative">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-24 md:py-40">
+    <div class="text-center mb-14 md:mb-20">
+      <div class="ornament-diamond text-ink/60 label mb-8"><span>§ 06 — Édition</span></div>
+      <h2 class="display text-ink text-[48px] md:text-[80px] lg:text-[104px] leading-[0.92]">
+        Une édition limitée<br/>
+        <span class="display-i text-ink/60">à cinq cents exemplaires.</span>
+      </h2>
+      <p class="body-serif text-ink/70 text-lg leading-relaxed max-w-xl mx-auto mt-6">
+        Paiement unique. Accès à vie au PDF et à toutes les mises à jour futures. Chaque exemplaire numéroté à la main.
+      </p>
+    </div>
 
-        <div class="mt-14 border-2 border-ink p-8 md:p-14 relative bg-cream">
-          <div class="absolute top-0 right-0 bg-ink text-cream label px-4 py-2">Offre de lancement</div>
+    <div class="max-w-5xl mx-auto">
+      <div class="relative border border-ink bg-cream grain-light overflow-hidden">
+        <!-- ribbon -->
+        <div class="absolute -right-16 top-8 bg-oxblood text-cream label px-20 py-1.5 rotate-45 origin-center shadow">
+          Offre de lancement
+        </div>
 
-          <div class="grid grid-cols-12 gap-8">
-            <div class="col-span-12 md:col-span-5">
-              <div class="label text-ink/55 line-through">Prix public — 599€</div>
-              <div class="flex items-baseline gap-3 mt-2">
-                <div class="serif text-ink text-[88px] md:text-[128px] leading-[0.85] tracking-tight">297<span class="serif-italic text-paprika">€</span></div>
+        <div class="grid grid-cols-12">
+          <!-- Left: price -->
+          <div class="col-span-12 md:col-span-5 p-10 md:p-14 border-b md:border-b-0 md:border-r rule">
+            <div class="label text-ink/55">Prix public</div>
+            <div class="serif text-ink/40 text-2xl line-through mt-1 num-lining">599€</div>
+
+            <div class="mt-6">
+              <div class="display text-ink text-[108px] md:text-[148px] leading-[0.82] tracking-[-0.03em]">
+                297<span class="display-i text-oxblood">€</span>
               </div>
-              <div class="label text-ink/60 mt-3">TTC · paiement unique</div>
-              <div class="hair mt-8 mb-8"></div>
-              <div class="serif-italic text-ink/75 text-lg leading-relaxed">
-                Cinq cents lecteurs, à travers toute la francophonie. Chaque exemplaire est numéroté à la main.
-              </div>
+              <div class="label text-ink/60 mt-4 num">TTC · Paiement unique</div>
             </div>
 
-            <div class="col-span-12 md:col-span-7 md:pl-10 md:border-l border-black/15">
-              <div class="label text-paprika mb-6">Ce que contient l'édition</div>
-              <ul class="space-y-4">
-                <li class="flex items-baseline gap-3 serif-text text-ink text-[17px]"><span class="text-paprika">→</span> Sept chapitres — 148 pages, PDF haute qualité</li>
-                <li class="flex items-baseline gap-3 serif-text text-ink text-[17px]"><span class="text-paprika">→</span> Douze annexes : menus-types, plannings, checklists de service</li>
-                <li class="flex items-baseline gap-3 serif-text text-ink text-[17px]"><span class="text-paprika">→</span> Le calculateur de food cost (feuille Excel prête à l'emploi)</li>
-                <li class="flex items-baseline gap-3 serif-text text-ink text-[17px]"><span class="text-paprika">→</span> Le playbook franchise en bonus — chapitre VII</li>
-                <li class="flex items-baseline gap-3 serif-text text-ink text-[17px]"><span class="text-paprika">→</span> Accès à vie et à toutes les futures éditions</li>
-                <li class="flex items-baseline gap-3 serif-text text-ink text-[17px]"><span class="text-paprika">→</span> Garantie de remboursement sous trente jours</li>
-              </ul>
+            <div class="hair-gold w-16 mt-10 mb-6"></div>
+            <p class="serif-i text-ink/70 text-lg leading-relaxed max-w-xs">
+              Cinq cents lecteurs, à travers la francophonie. Chaque exemplaire numéroté à la main.
+            </p>
+            <div class="mt-6 label text-oxblood num-lining">N° 001 → 500</div>
+          </div>
 
-              <a href="#" class="mt-10 group inline-flex items-center gap-3 bg-ink text-cream px-8 py-5 rounded-full font-medium text-lg hover:bg-paprika transition">
-                Commander mon exemplaire
-                <span class="w-8 h-8 rounded-full bg-cream text-ink flex items-center justify-center group-hover:translate-x-1 transition">→</span>
-              </a>
-              <div class="label text-ink/50 mt-4">CB · Virement · PayPal — paiement sécurisé</div>
-            </div>
+          <!-- Right: contents -->
+          <div class="col-span-12 md:col-span-7 p-10 md:p-14">
+            <div class="label text-oxblood mb-6">Ce que contient l'édition</div>
+            <ul class="space-y-4">
+              <li class="flex items-baseline gap-3 body-serif text-ink text-[17px]"><span class="text-gold">◆</span> Sept chapitres · 148 pages · PDF haute qualité</li>
+              <li class="flex items-baseline gap-3 body-serif text-ink text-[17px]"><span class="text-gold">◆</span> Douze annexes : menus-types, plannings, checklists de service</li>
+              <li class="flex items-baseline gap-3 body-serif text-ink text-[17px]"><span class="text-gold">◆</span> Le calculateur de food cost (feuille Excel prête à l'emploi)</li>
+              <li class="flex items-baseline gap-3 body-serif text-ink text-[17px]"><span class="text-gold">◆</span> Le playbook franchise en bonus — chapitre VII</li>
+              <li class="flex items-baseline gap-3 body-serif text-ink text-[17px]"><span class="text-gold">◆</span> Accès à vie et à toutes les futures éditions</li>
+              <li class="flex items-baseline gap-3 body-serif text-ink text-[17px]"><span class="text-gold">◆</span> Garantie de remboursement sous trente jours</li>
+            </ul>
+
+            <a href="#" class="mt-12 group inline-flex items-center gap-4 bg-ink text-cream pl-8 pr-6 py-5 hover:bg-oxblood transition">
+              <span class="label-lg">Commander mon exemplaire</span>
+              <span class="w-9 h-9 border border-cream/40 flex items-center justify-center group-hover:translate-x-1 transition">→</span>
+            </a>
+            <div class="label text-ink/50 mt-5 num">CB · Virement · PayPal — paiement sécurisé</div>
           </div>
         </div>
       </div>
@@ -560,86 +716,105 @@
 </section>
 
 <!-- FAQ -->
-<section class="border-b rule border-black/15 bg-cream-2/40">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-20 md:py-32">
-    <div class="grid grid-cols-12 gap-8 md:gap-12">
-      <div class="col-span-12 md:col-span-3">
-        <div class="label text-paprika mb-3">§ 07 — F.A.Q.</div>
-        <div class="serif-italic text-ink/70 text-lg leading-snug">Les questions qu'on nous pose le plus souvent.</div>
-      </div>
-      <div class="col-span-12 md:col-span-9 max-w-3xl">
-        <details class="border-t rule border-black/25 py-6 group">
-          <summary class="flex items-baseline justify-between gap-6">
-            <span class="serif text-ink text-[22px] md:text-[26px] leading-snug">Le livre est-il adapté si je n'ai jamais ouvert de restaurant ?</span>
-            <span class="faq-plus serif text-paprika text-3xl leading-none">+</span>
-          </summary>
-          <p class="serif-text text-ink/80 text-[17px] leading-relaxed mt-4 max-w-2xl">Oui, et c'est même la lecture idéale à ce stade. Le chapitre I part de zéro et vous accompagne jusqu'à la validation du concept avant même le choix du local.</p>
-        </details>
-        <details class="border-t rule border-black/25 py-6 group">
-          <summary class="flex items-baseline justify-between gap-6">
-            <span class="serif text-ink text-[22px] md:text-[26px] leading-snug">Est-ce spécifique à l'Algérie, ou applicable ailleurs ?</span>
-            <span class="faq-plus serif text-paprika text-3xl leading-none">+</span>
-          </summary>
-          <p class="serif-text text-ink/80 text-[17px] leading-relaxed mt-4 max-w-2xl">Les principes s'appliquent à n'importe quel marché francophone. Les exemples viennent d'Alger, mais les mécaniques — food cost, marges, équipe, contenu — sont universelles.</p>
-        </details>
-        <details class="border-t rule border-black/25 py-6 group">
-          <summary class="flex items-baseline justify-between gap-6">
-            <span class="serif text-ink text-[22px] md:text-[26px] leading-snug">Combien de temps pour lire l'ensemble ?</span>
-            <span class="faq-plus serif text-paprika text-3xl leading-none">+</span>
-          </summary>
-          <p class="serif-text text-ink/80 text-[17px] leading-relaxed mt-4 max-w-2xl">Deux heures pour une première lecture. Six à huit semaines pour appliquer sérieusement, un chapitre par semaine.</p>
-        </details>
-        <details class="border-t rule border-black/25 py-6 group">
-          <summary class="flex items-baseline justify-between gap-6">
-            <span class="serif text-ink text-[22px] md:text-[26px] leading-snug">Quelle est la garantie ?</span>
-            <span class="faq-plus serif text-paprika text-3xl leading-none">+</span>
-          </summary>
-          <p class="serif-text text-ink/80 text-[17px] leading-relaxed mt-4 max-w-2xl">Trente jours. Si le livre ne vous apporte rien, nous vous remboursons intégralement, sans questions.</p>
-        </details>
-        <details class="border-t border-b rule border-black/25 py-6 group">
-          <summary class="flex items-baseline justify-between gap-6">
-            <span class="serif text-ink text-[22px] md:text-[26px] leading-snug">Sous quel format est livré l'ouvrage ?</span>
-            <span class="faq-plus serif text-paprika text-3xl leading-none">+</span>
-          </summary>
-          <p class="serif-text text-ink/80 text-[17px] leading-relaxed mt-4 max-w-2xl">PDF haute résolution, lisible sur mobile, tablette ou ordinateur, avec fichiers annexes (feuilles Excel, templates de communication).</p>
-        </details>
-      </div>
+<section class="border-b rule bg-cream-2/60 relative">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-24 md:py-40">
+    <div class="text-center mb-14 md:mb-20">
+      <div class="ornament-diamond text-ink/60 label mb-8"><span>§ 07 — F.A.Q.</span></div>
+      <h2 class="display text-ink text-[44px] md:text-[68px] leading-[0.95]">
+        Les questions<br/>
+        <span class="display-i text-ink/60">qu'on nous pose le plus souvent.</span>
+      </h2>
+    </div>
+
+    <div class="max-w-3xl mx-auto">
+      <details class="border-t rule py-7 group">
+        <summary class="flex items-baseline justify-between gap-8">
+          <span class="serif text-ink text-[22px] md:text-[26px] leading-snug">Le livre est-il adapté si je n'ai jamais ouvert de restaurant ?</span>
+          <span class="faq-plus display text-oxblood text-3xl leading-none">+</span>
+        </summary>
+        <p class="body-serif text-ink/80 text-[17px] leading-[1.7] mt-4 max-w-2xl">
+          Oui, et c'est même la lecture idéale à ce stade. Le chapitre I part de zéro et vous accompagne jusqu'à la validation du concept avant même le choix du local.
+        </p>
+      </details>
+      <details class="border-t rule py-7 group">
+        <summary class="flex items-baseline justify-between gap-8">
+          <span class="serif text-ink text-[22px] md:text-[26px] leading-snug">Est-ce spécifique à l'Algérie, ou applicable ailleurs ?</span>
+          <span class="faq-plus display text-oxblood text-3xl leading-none">+</span>
+        </summary>
+        <p class="body-serif text-ink/80 text-[17px] leading-[1.7] mt-4 max-w-2xl">
+          Les principes s'appliquent à n'importe quel marché francophone. Les exemples viennent d'Alger, mais les mécaniques — food cost, marges, équipe, contenu — sont universelles.
+        </p>
+      </details>
+      <details class="border-t rule py-7 group">
+        <summary class="flex items-baseline justify-between gap-8">
+          <span class="serif text-ink text-[22px] md:text-[26px] leading-snug">Combien de temps pour lire l'ensemble ?</span>
+          <span class="faq-plus display text-oxblood text-3xl leading-none">+</span>
+        </summary>
+        <p class="body-serif text-ink/80 text-[17px] leading-[1.7] mt-4 max-w-2xl">
+          Deux heures pour une première lecture. Six à huit semaines pour appliquer sérieusement, un chapitre par semaine.
+        </p>
+      </details>
+      <details class="border-t rule py-7 group">
+        <summary class="flex items-baseline justify-between gap-8">
+          <span class="serif text-ink text-[22px] md:text-[26px] leading-snug">Quelle est la garantie ?</span>
+          <span class="faq-plus display text-oxblood text-3xl leading-none">+</span>
+        </summary>
+        <p class="body-serif text-ink/80 text-[17px] leading-[1.7] mt-4 max-w-2xl">
+          Trente jours. Si le livre ne vous apporte rien, nous vous remboursons intégralement, sans questions.
+        </p>
+      </details>
+      <details class="border-t border-b rule py-7 group">
+        <summary class="flex items-baseline justify-between gap-8">
+          <span class="serif text-ink text-[22px] md:text-[26px] leading-snug">Sous quel format est livré l'ouvrage ?</span>
+          <span class="faq-plus display text-oxblood text-3xl leading-none">+</span>
+        </summary>
+        <p class="body-serif text-ink/80 text-[17px] leading-[1.7] mt-4 max-w-2xl">
+          PDF haute résolution, lisible sur mobile, tablette ou ordinateur, avec fichiers annexes (feuilles Excel, templates de communication).
+        </p>
+      </details>
     </div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
-<section class="border-b rule border-black/15 bg-ink text-cream relative overflow-hidden">
-  <div class="absolute inset-0 grain opacity-30"></div>
-  <div class="relative max-w-[1400px] mx-auto px-6 md:px-10 py-24 md:py-40 text-center">
-    <div class="label text-paprika mb-8">Épilogue</div>
-    <h2 class="serif text-cream text-[52px] sm:text-[72px] md:text-[104px] leading-[0.9] tracking-[-0.02em] max-w-5xl mx-auto">
+<section class="border-b rule bg-ink text-cream relative overflow-hidden">
+  <div class="grain absolute inset-0 opacity-40"></div>
+  <div class="relative max-w-[1440px] mx-auto px-6 md:px-12 py-28 md:py-48 text-center">
+    <div class="ornament-diamond text-cream/60 label mb-10"><span>Épilogue</span></div>
+    <h2 class="display text-cream text-[56px] sm:text-[88px] md:text-[124px] lg:text-[152px] leading-[0.88] tracking-[-0.03em] max-w-6xl mx-auto">
       Vous pouvez passer<br/>
-      <span class="serif-italic text-cream/70">dix ans à tâtonner.</span><br/>
-      Ou lire <span class="text-paprika">ceci</span>.
+      <span class="display-i text-cream/65">dix ans à tâtonner.</span><br/>
+      Ou lire <span class="text-oxblood">ceci</span>.
     </h2>
-    <a href="#commander" class="mt-14 group inline-flex items-center gap-3 bg-paprika text-cream px-8 py-5 rounded-full font-medium text-lg hover:bg-cream hover:text-ink transition">
-      Commander l'édition N°01
-      <span class="w-8 h-8 rounded-full bg-cream text-ink flex items-center justify-center group-hover:translate-x-1 transition">→</span>
+
+    <div class="hair-gold w-24 mx-auto mt-14"></div>
+
+    <a href="#commander" class="mt-14 group inline-flex items-center gap-4 border border-cream pl-10 pr-6 py-5 hover:bg-cream hover:text-ink transition">
+      <span class="label-lg">Commander l'édition N°01</span>
+      <span class="w-9 h-9 border border-current flex items-center justify-center group-hover:translate-x-1 transition">→</span>
     </a>
-    <div class="serif-italic text-cream/50 mt-6">— PoP'Way, Alger, printemps 2026.</div>
+    <div class="serif-i text-cream/45 mt-8">— PoP'Way, Alger, printemps 2026.</div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="bg-cream">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-12 grid grid-cols-12 gap-6 items-center">
-    <div class="col-span-12 md:col-span-4 flex items-center gap-3">
-      <div class="serif text-ink text-2xl">PoP<span class="text-paprika">·</span>Way</div>
-      <div class="hair flex-1"></div>
+  <div class="max-w-[1440px] mx-auto px-6 md:px-12 py-16">
+    <div class="text-center mb-10">
+      <div class="display text-ink text-4xl md:text-5xl">
+        PoP<span class="text-oxblood">·</span>Way
+      </div>
+      <div class="ornament-diamond text-ink/50 label mt-4"><span>Une publication indépendante</span></div>
     </div>
-    <div class="col-span-12 md:col-span-4 text-center label text-ink/60">
-      © 2026 — Tous droits réservés
-    </div>
-    <div class="col-span-12 md:col-span-4 flex justify-center md:justify-end gap-8 label text-ink/70">
-      <a href="#" class="hover:text-paprika transition">Mentions légales</a>
-      <a href="#" class="hover:text-paprika transition">CGV</a>
-      <a href="#" class="hover:text-paprika transition">Contact</a>
+    <div class="hair mb-8"></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left items-center">
+      <div class="label text-ink/60">© MMXXVI — Tous droits réservés</div>
+      <div class="label text-ink/60 text-center">Alger · Paris · Bruxelles · Montréal</div>
+      <div class="flex justify-center md:justify-end gap-8 label text-ink/70">
+        <a href="#" class="hover:text-oxblood transition">Mentions</a>
+        <a href="#" class="hover:text-oxblood transition">CGV</a>
+        <a href="#" class="hover:text-oxblood transition">Contact</a>
+      </div>
     </div>
   </div>
 </footer>
